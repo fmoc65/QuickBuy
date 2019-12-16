@@ -30,6 +30,9 @@ namespace QuickBuy.Domain.Entidades
 
             if (string.IsNullOrEmpty(CEP))
                 AdicionarCritica("Atenção - o Pedido deverá conter um CEP Válido!");
+
+            if (FormaPagamentoId == 0)
+                AdicionarCritica("Atenção - Não foi informado a forma de pagamento!");
         }
     }
 }

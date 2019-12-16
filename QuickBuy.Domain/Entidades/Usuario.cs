@@ -13,7 +13,11 @@ namespace QuickBuy.Domain.Entidades
 
         public override void Validate()
         {
-            
+            if (string.IsNullOrEmpty(Email))
+                AdicionarCritica("Atenção - Não foi adicionado um e-mail");
+
+            if (string.IsNullOrEmpty(Senha))
+                AdicionarCritica("Atenção - Não foi informado a senha!");
         }
     }
 }
